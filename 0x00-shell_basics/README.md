@@ -1,1 +1,1 @@
-A path name of current working directory
+Display content in long format
