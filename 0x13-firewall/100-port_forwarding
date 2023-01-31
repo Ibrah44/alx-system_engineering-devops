@@ -1,7 +1,6 @@
 #
 # rules.before
 #
-# Rules that should be run before the ufw command line added rules. Custom
 # rules should be added to one of these chains:
 #   ufw-before-input
 #   ufw-before-output
@@ -15,7 +14,6 @@
 COMMIT
 # end of added section
 
-# Don't delete these required lines, otherwise there will be errors
 *filter
 :ufw-before-input - [0:0]
 :ufw-before-output - [0:0]
@@ -78,5 +76,4 @@ COMMIT
 # is uncommented)
 -A ufw-before-input -p udp -d 239.255.255.250 --dport 1900 -j ACCEPT
 
-# don't delete the 'COMMIT' line or these rules won't be processed
 COMMIT
